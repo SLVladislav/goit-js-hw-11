@@ -107,27 +107,27 @@ function createImageEl(hits) {
   refs.container.insertAdjacentHTML('beforeend', markup);
 
   simpleLightbox();
-  // scroll();
+  scroll();
 }
 
 function resetRenderGallery() {
   refs.container.innerHTML = '';
 }
 
-// function scroll() {
-//   const { height: cardHeight } = document
-//     .querySelector('.gallery')
-//     .firstElementChild.getBoundingClientRect();
+function scroll() {
+  const { height: cardHeight } = document
+    .querySelector('.gallery')
+    .firstElementChild.getBoundingClientRect();
 
-//   window.scrollBy({
-//     top: cardHeight * 1,
-//     behavior: 'smooth',
-//   });
-// }
+  window.scrollBy({
+    top: cardHeight * 1,
+    behavior: 'smooth',
+  });
+}
 
 function simpleLightbox() {
   let lightbox = new SimpleLightbox('.gallery a', {
-    /* options */
+    
   });
   lightbox.refresh();
 }
